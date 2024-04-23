@@ -1,0 +1,89 @@
+/* -- Page Setup -- */
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+:root{
+    --color-accent: lightgray;
+    --color-accent-hover: gray;
+    --color-light:#f7eab9; 
+    --color-dark: #222;
+    --spacing: 1.5rem;
+    --shadow: 0 0 0.5rem rgba(0,0,0,0.35);
+}
+.wrapper{
+    margin-inline: auto;
+    max-width: 1000px;
+    
+}
+
+body{
+    /* line-height: 1.5; */
+    background-color: lightyellow;
+    margin-top: 0px; 
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    /* add font family 
+    font-family: var();
+    */
+    
+}
+/* -- Main Divs -- */
+
+.cards{  /* -- Card Div -- */
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing);
+}
+.card{
+    flex: 1 1 25ch;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow);
+    padding-inline: var(--spacing);
+    padding: var(--spacing);
+}
+
+.grid1{ /* -- Header Grid + nav bar -- */
+    display: grid;
+    grid-template-rows: 2;
+    
+}
+
+/* -- Card specific element work -- */
+.card > img {
+    object-fit: cover;
+    width: 100%;
+}
+.card > a{
+    border: thick solid var(--color-accent);
+    border-radius: 0.5rem;
+    background-color: var(--color-accent);
+    text-decoration: none;
+    color: var(--color-dark);
+    padding: 0.5rem;
+    
+    /* Center */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    
+    /* Box Shadow */
+    /*box-shadow: var(--shadow); */
+}
+.card > a:hover{
+    border: thick solid var(--color-accent-hover);
+    background-color: var(--color-accent-hover);
+    color: white;
+}
+/* -- Nav Bar Work -- */
+
+a{
+    text-decoration: none;
+    color: black;
+
+}
+
+/* --  -- */
