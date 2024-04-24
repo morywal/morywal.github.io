@@ -47,8 +47,23 @@ body{
 
 .grid1{ /* -- Header Grid + nav bar -- */
     display: grid;
-    grid-template-rows: 2;
+    grid-template-columns: 1fr 4fr;
+    border-bottom: thin solid black;
+    gap: 1em;
+    margin-bottom: 1rem;
     
+}
+header{
+   grid-column: 1;
+}
+nav{
+    grid-column: 2;
+    display: flex;
+    flex-direction: row;
+
+}
+.nav1{
+    flex-grow: 1;
 }
 
 /* -- Card specific element work -- */
