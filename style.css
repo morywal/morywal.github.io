@@ -14,7 +14,26 @@
 .wrapper{
     margin-inline: auto;
     max-width: 1000px;
-    
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-template-areas:
+      "grid1"
+      "cards"
+      "main";
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+}
+
+@media only screen and (max-width: 999px) {
+    .wrapper {
+        display: grid;
+        width: 100%;
+        height: 100vh;
+        max-width: 1000px;
+        grid-template-rows: repeat(5, 1fr);
+
+    }
 }
 
 body{
@@ -47,9 +66,31 @@ body{
 
 .grid1{ /* -- Header Grid + nav bar -- */
     display: grid;
-    grid-template-rows: 2;
+    grid-template-columns: 1fr 4fr;
+    border-bottom: thin solid black;
+    gap: 1em;
+    margin-bottom: 1rem;
     
 }
+header{
+   grid-column: 1;
+}
+nav{
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+}
+.nav1{
+   grid-column: 1;
+}
+/* -- Side Divs -- */
+.split{
+    text-align: center;
+    border-bottom: thin solid black;
+    margin-bottom: 1rem;
+}
+
 
 /* -- Card specific element work -- */
 .card > img {
@@ -80,11 +121,45 @@ body{
 }
 /* -- Nav Bar Work -- */
 
-a{
+nav > p > a {
     text-decoration: none;
     color: black;
-
+    padding: 0 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+nav > p > a:hover {
+    background-color: darkgray; 
+    color: white; 
+    width: 100%;
+    height: 100%;
+    
 }
 
 /* --  position: sticky 
 posoiton top-- */
+
+/* -- area stack -- */
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+.grid-area-stack{
+    display: grid;
+    grid-template-areas: "stack";
+    aspect-ratio: 16/9;
+    margin-bottom: 1rem;
+}
+
+.grid-area-stack > *{
+    grid-area: stack;
+    place-self: center;
+    
+
+}
+
+.hero{
+    color: white;
+    background-color: white;
+}
