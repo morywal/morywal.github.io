@@ -4,10 +4,12 @@
 }
 
 :root{
-    --color-accent: lightgray;
-    --color-accent-hover: gray;
-    --color-light:#f7eab9; 
-    --color-dark: #222;
+    --color-darkB: #3D52A0;
+    --color-B: #7091E6;
+    --color-light:#ADBBDA; 
+    --color-wolfgray: #8697C4;
+    --color-white: #EDE8F5;
+    --color-black: #222;
     --spacing: 1.5rem;
     --shadow: 0 0 0.5rem rgba(0,0,0,0.35);
 }
@@ -38,7 +40,7 @@
 
 body{
     /* line-height: 1.5; */
-    background-color: lightyellow;
+    background-color: var(--color-light);
     margin-top: 0px; 
     margin-bottom: 0px;
     margin-left: 0px;
@@ -57,7 +59,7 @@ body{
 }
 .card{
     flex: 1 1 25ch;
-    background-color: white;
+    background-color:  var(--color-white);;
     border-radius: 0.5rem;
     box-shadow: var(--shadow);
     padding-inline: var(--spacing);
@@ -70,8 +72,18 @@ body{
     border-bottom: thin solid black;
     gap: 1em;
     margin-bottom: 1rem;
-    
+    position: sticky;
+    top: 0;
+    height: 70px;
+    background-color: var(--color-light);
+    transition: background-color 0.3s ease;
 }
+
+.grid1--scrolled{
+    background-color: var(--color-B); 
+    transition: background-color 0.3s ease;
+}
+
 header{
    grid-column: 1;
 }
@@ -79,7 +91,6 @@ nav{
     grid-column: 2;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-
 }
 .nav1{
    grid-column: 1;
@@ -98,9 +109,9 @@ nav{
     width: 100%;
 }
 .card > a{
-    border: thick solid var(--color-accent);
+    border: thick solid var(--color-B);
     border-radius: 0.5rem;
-    background-color: var(--color-accent);
+    background-color: var(--color-B);
     text-decoration: none;
     color: var(--color-dark);
     padding: 0.5rem;
@@ -115,15 +126,16 @@ nav{
     /*box-shadow: var(--shadow); */
 }
 .card > a:hover{
-    border: thick solid var(--color-accent-hover);
-    background-color: var(--color-accent-hover);
+    border: thick solid var(--color-darkB);
+    background-color: var(--color-darkB);
     color: white;
 }
 /* -- Nav Bar Work -- */
 
 nav > p > a {
     text-decoration: none;
-    color: black;
+    font-size: 1.15em;
+    color:  var(--color-blackB);
     padding: 0 10px;
     width: 100%;
     height: 100%;
@@ -132,15 +144,15 @@ nav > p > a {
     align-items: flex-end;
 }
 nav > p > a:hover {
-    background-color: darkgray; 
-    color: white; 
-    width: 100%;
-    height: 100%;
-   
+    color: rgb(77, 77, 77); 
+    
 }
 
 /* --  position: sticky 
-posoiton top-- */
+posoiton top-- 
+
+
+*/
 
 /* -- area stack -- */
 
@@ -187,4 +199,8 @@ img{
 
 .wrapper2{
     text-align: center;
+}
+
+h1{
+    color:  var(--color-black);
 }
