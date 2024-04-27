@@ -75,13 +75,16 @@ body{
     position: sticky;
     top: 0;
     height: 70px;
-    background-color: var(--color-light);
+    background-color: var(--color-wolfgray);
     transition: background-color 0.3s ease;
 }
 
 .grid1--scrolled{
-    background-color: var(--color-B); 
+    background-color: var(--color-black); 
     transition: background-color 0.3s ease;
+    color:  var(--color-white);
+
+    
 }
 
 header{
@@ -201,6 +204,11 @@ img{
     text-align: center;
 }
 
-h1{
+h4{
+    font-size: 2em;
     color:  var(--color-black);
+}
+
+h1{
+    margin-right: 1px;
 }
