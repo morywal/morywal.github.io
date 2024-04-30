@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTf-8">
+        <meta name="viewport" content="width=device, initial-scale=1">
+        <title>Max's Portfoilio</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="grid1">
+            <header>
+                <h1>Orywal</h1>
+
+            </header>
+            <nav>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="work.html">Work</a></p>
+                <p><a href="currentWork.html">3D Modeling</a></p>
+                <p><a href="about.html">About Me</a></p>
+                <p><a href="contact.html">Contact</a></p>
+            </nav>
+        </div>
+
+
+        <div class="hero grid-area-stack3">
+            <video src="images/MilesMovement.mp4" autoplay loop muted></video>
+            <div class="hero--content">
+                <h2>Miles Morales Test Animation</h2>
+        </div>
+        </div>
+        <div class="split">
+            <h4>My Work</h4>
+        </div>
+       <div class="cards">
+
+            <div class="card">
+            <h3>Adding Texture onto Miles</h3>
+            <img src="images/miles color.png" alt="image">
+            <p> Initial Struggles to get Texturing Haftones on Correctly</p>
+            <a href="#">More Info</a>
+            </div>
+            <div class="card1">
+            <h3>Testing textures on a Pug</h3>
+            <img src="images/PugTexture.png" alt="image">
+            <p>Textures look perfect on the Pug...</p>
+            <a href="#">More Info</a>
+            </div>
+            <div class="card">
+            <h3>Rigging the Character</h3>
+            <img src="images/Screenshot 2024-04-29 at 4.16.14 PM.png" alt="image">
+            <p>Rig the Character Up for Animation!</p>
+            <a href="#">More Info</a>
+            </div>
+            <div class="card">
+            <h3>Card</h3>
+            <img src="images/miles final draft.png" alt="image">
+            <p>Initial Still image, mainly work on the model, so composition was done as a side note(2d background)</p>
+            <a href="#">More Info</a>
+            </div>
+            <div class="card">
+            <h3>Card</h3>
+            <img src="images/Miles.png" alt="image">
+            <p>inital texturing on miles, done in earlier version of C4d, toon shading not as accessible</p>
+            <a href="#">More Info</a>
+            </div>
+
+        </div>
+        </div>
+
+       
+        <!-- JAVA SCRIPT SCROLL CODE -->
+        <script src="script.js"></script>
+        <script>
+            window.addEventListener('scroll', function() {
+              var nav = document.querySelector('.grid1');
+          
+              if (window.scrollY > 0) {
+                nav.classList.add('grid1--scrolled');
+              } else {
+                nav.classList.remove('grid1--scrolled');
+              }
+            });
+          </script>
+
+    </body>
+</html>

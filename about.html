@@ -16,15 +16,13 @@
             <nav>
                 <p><a href="index.html">Home</a></p>
                 <p><a href="work.html">Work</a></p>
-                <p><a href="currentWork.html">In Progress</a></p>
+                <p><a href="currentWork.html">3D Modeling</a></p>
                 <p><a href="about.html">About Me</a></p>
                 <p><a href="contact.html">Contact</a></p>
             </nav>
         </div>
 
         <h1>About Me</h1>
-        <p>My name is Maxim Orywal</p>
-        <p>I'm a current student at CLU graduating 2025. Im pursuing a Computer Science Major and a Multimedia Minor</p>
         
         <div class="hero2 grid-area-stack2">
             <img src="images/HeadShot.jpg" alt="head shot">
@@ -34,10 +32,31 @@
             
         </div>
         <div class="split">
+            
+            <p>Hello My name is Maxim Orywal (He/Him)</p>
+            <p>I'm a current student at CLU graduating 2025. Im pursuing a Computer Science Major and a Multimedia Minor</p>
+            <h1>Goals</h1>
+            <p>I hope to work on projects that interest me as well as create code and art that I believe in making</p>
             <h1>My Story</h1>
+            <p>I was a big Soccer player growing up and did nothing but until High School when I started to diversify my interests into Art, Coding and Sports. </p>
+            <p> Senior Year of High School I got injured and could not continue playing into college. That is when I got more into coding and decided to pursue it as a career, especially concerning <b>Robotics</b>. Around Junior year I had taken a ton of classes and none interested me more (besides CS) than multimedia. I studied a lot of the <b>Adobe</b> programs before settling into a <b>Cinema 4D</b> class and fell in love with 3D modeling</p>
+            <p>Im an ESFP Personality Type and I love working with people. I was given the nickname of "Over Achiever" because I try to complete work and aissgnments to my 100% completion which is oftentimes beyond what people go for</p>
         </div>
        
         </div>
+        <!-- JAVA SCRIPT SCROLL CODE -->
+        <script src="script.js"></script>
+        <script>
+            window.addEventListener('scroll', function() {
+              var nav = document.querySelector('.grid1');
+          
+              if (window.scrollY > 0) {
+                nav.classList.add('grid1--scrolled');
+              } else {
+                nav.classList.remove('grid1--scrolled');
+              }
+            });
+          </script>
 
     </body>
 </html>
