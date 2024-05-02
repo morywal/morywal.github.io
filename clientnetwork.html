@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTf-8">
+        <meta name="viewport" content="width=device, initial-scale=1">
+        <title>Max's Portfoilio</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="grid1">
+            <header>
+                <h1>Orywal</h1>
+
+            </header>
+            <nav>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="work.html">Coding</a></p>
+                <p><a href="currentWork.html">3D Modeling</a></p>
+                <p><a href="about.html">About Me</a></p>
+                <p><a href="contact.html">Contact</a></p>
+            </nav>
+        </div>
+
+
+        <div class="hero grid-area-stack">
+            <img src="images/MainAfter.webp" alt="image">
+            <div class="hero--content">
+                <h2>Hero Image</h2>
+        </div>
+        </div>
+        <div class="split">
+            <h4>Client and Network Side Work</h4>
+        </div>
+       <div class="cards">
+
+            <div class="card3">
+            <h3>Arduinoi Robotics Code</h3>
+            <img src="images/client1.png" alt="arduino">
+            <p> Learn about the different Robotics coding I've done </p>
+            <a href="#">Visit Project</a>
+            </div>
+            <div class="card3">
+            <h3>Client and Network Work</h3>
+            <img src="images/login.png" alt="login">
+            <p>Worked on a Project that has client and network side databse with email login and an email bot that can help send a forgot password system</p>
+            <a href="#">Visit Project</a>
+            </div>
+            <div class="card3">
+            <img src="images/loggedin.png" alt="login">
+            <p>Worked on a Project that has client and network side databse with email login and an email bot that can help send a forgot password system</p>
+            <a href="#">Visit Project</a>
+            </div>
+            <div class="card3">
+            <img src="images/network1.png" alt="login">
+            <p>Worked on a Project that has client and network side databse with email login and an email bot that can help send a forgot password system</p>
+            <a href="#">Visit Project</a>
+            </div>
+        </div>
+        </div>
+       
+        <!-- JAVA SCRIPT SCROLL CODE -->
+        <script src="script.js"></script>
+        <script>
+            window.addEventListener('scroll', function() {
+              var nav = document.querySelector('.grid1');
+          
+              if (window.scrollY > 0) {
+                nav.classList.add('grid1--scrolled');
+              } else {
+                nav.classList.remove('grid1--scrolled');
+              }
+            });
+          </script>
+
+    </body>
+</html>
