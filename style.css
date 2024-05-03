@@ -37,6 +37,19 @@
 
     }
 }
+@media (prefers-color-scheme: dark) {
+    /* Apply dark mode styles here */
+    .wrapper {
+        /* Example dark mode style */
+        background-color: var(--color-black);
+        color: var(--color-white);
+    }
+}
+.dark-mode {
+    /* Add your dark mode styles here */
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
 
 body{
     /* line-height: 1.5; */
