@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTf-8">
-        <meta name="viewport" content="width=device, initial-scale=1">
-        <title>Max's Portfoilio</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="wrapper">
-            <div class="grid1">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="grid1">
             <header>
                 <h1>Orywal</h1>
-
             </header>
             <nav>
                 <p><a href="index.html">Home</a></p>
@@ -21,52 +20,33 @@
                 <p><a href="contact.html">Contact</a></p>
             </nav>
         </div>
-        </div>
-        <div class="split">
-            <h4>Client and Network Side Work</h4>
-        </div>
-       <div class="cards">
-
-            <div class="card3">
+    </div>
+    <div class="split">
+        <h4>Client and Network Side Work</h4>
+    </div>
+    <div class="cards">
+        <div class="card3">
             <h3>Client Side Server IP enter</h3>
             <img src="images/client1.png" alt="arduino">
             <p>In order to start the code you must first enter your IP address in order to connect you to the database</p>
-            
-            </div>
-            <div class="card3">
+        </div>
+        <div class="card3">
             <h3>Connected</h3>
             <img src="images/login.png" alt="login">
             <p>After connecting, you can login with an existing account, make a new account, or disconnect</p>
-            
-            </div>
-            <div class="card3">
+        </div>
+        <div class="card3">
             <h3>Ready to Login</h3>
             <img src="images/loggedin.png" alt="login">
             <p>After clicking login you can now enter your account information, and if you press forgot password, a new page will pop up and let you enter your email to have its password show up</p>
-            
-            </div>
-            <div class="card3">
+        </div>
+        <div class="card3">
             <h3>Network Side</h3>
             <img src="images/network1.png" alt="login">
             <p>Network Side, you can send a message to all clients logged in</p>
-            
-            </div>
         </div>
-        </div>
-       
-        <!-- JAVA SCRIPT SCROLL CODE -->
-        <script src="script.js"></script>
-        <script>
-            window.addEventListener('scroll', function() {
-              var nav = document.querySelector('.grid1');
-          
-              if (window.scrollY > 0) {
-                nav.classList.add('grid1--scrolled');
-              } else {
-                nav.classList.remove('grid1--scrolled');
-              }
-            });
-          </script>
-
-    </body>
+    </div>
+    <!-- JavaScript for sticky navigation -->
+    <script src="script.js"></script>
+</body>
 </html>
