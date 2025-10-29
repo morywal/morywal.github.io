@@ -65,6 +65,7 @@ body{
 }
 /* -- Main Divs -- */
 
+
 .cards{  /* -- Card Div -- */
     display: flex;
     flex-wrap: wrap;
@@ -114,7 +115,6 @@ body{
     background-color: var(--color-black); 
     transition: background-color 0.3s ease;
     color:  var(--color-white);
-
     
 }
 
@@ -186,6 +186,7 @@ nav{
     /* Box Shadow */
     /*box-shadow: var(--shadow); */
 }
+
 .card1 > a:hover{
     border: thick solid var(--color-darkB);
     background-color: var(--color-darkB);
@@ -193,6 +194,12 @@ nav{
 }
 
 /* -- Nav Bar Work -- */
+
+.hero--content {
+  /* This will center the h2 text inside its container */
+  text-align: center;
+  padding: 0 1.5rem;
+}
 
 nav > p > a {
     text-decoration: none;
