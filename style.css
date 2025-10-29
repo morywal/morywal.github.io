@@ -210,11 +210,27 @@ nav > p > a:hover {
     
 }
 
-/* --  position: sticky 
-posoiton top-- 
+.cta-container {
+    /* This centers the button and gives it space */
+    text-align: center;
+    padding: 40px 20px 60px 20px; /* Adds space above/below */
+}
 
+.btn-primary {
+    display: inline-block; 
+    padding: 14px 28px; 
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffffff;   
+    background-color: #337ab7; 
+    border-radius: 5px;    
+    text-decoration: none;   
+    transition: background-color 0.3s ease; 
+}
 
-*/
+.btn-primary:hover {
+    background-color: #286090; 
+}
 
 /* -- area stack -- */
 
