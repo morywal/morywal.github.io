@@ -195,12 +195,6 @@ nav{
 
 /* -- Nav Bar Work -- */
 
-.hero--content {
-  /* This will center the h2 text inside its container */
-  text-align: center;
-  padding: 0 1.5rem;
-}
-
 nav > p > a {
     text-decoration: none;
     font-size: 1.15em;
@@ -295,9 +289,13 @@ img{
 }
 .hero{
     color: white;
-    
+
 }
 
+.hero--content {
+  text-align: center;
+  padding: 0 1.5rem;
+}
 .hero2{
    color: black;
 }
