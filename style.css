@@ -487,3 +487,17 @@ video{
     font-style: italic;
     font-size: 0.9rem;
 }
+
+.site-footer {
+    margin-top: var(--spacing);
+    padding: 2rem 1rem; 
+    background-color: var(--color-darkB); 
+    color: var(--color-white);
+    
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.site-footer p {
+    margin: 0; 
+}
