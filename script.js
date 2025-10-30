@@ -7,5 +7,4 @@ window.addEventListener('scroll', function() {
       nav.classList.remove('grid1--scrolled');
     }
   });
-
-
+  

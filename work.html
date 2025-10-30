@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<!-- This is my Projcts Page I need all 9 projects here-->
 <html lang="en">
     <head>
         <meta charset="UTf-8">
         <meta name="viewport" content="width=device, initial-scale=1">
-        <title>Max's Portfolio</title>
+        <title>Max's Portfolio - All Projects</title>
         <link rel="stylesheet" href="style.css">
     </head>
      <body>
@@ -12,12 +11,24 @@
             <div class="grid1">
             <header>
                 <h1>Orywal</h1>
-
             </header>
             <nav>
                 <p><a href="index.html">Home</a></p>
-                <p><a href="work.html">Projects</a></p>
-                <p><a href="about.html">About / Resume</a></p>
+                <div class="nav-item dropdown">
+                    <p class="nav-link"><a href="work.html">Projects</a></p>
+                    <div class="dropdown-content">
+                        <a href="ProjectPages/bendTD.html">BendsTD</a>
+                        <a href="ProjectPages/halloweenSB.html">Halloween Skeeball</a>
+                        <a href="ProjectPages/fusionfest.html">Fusion Fest</a>
+                        <a href="ProjectPages/mayaRigging.html">Maya Rigging Tool</a>
+                        <a href="ProjectPages/overblown.html">Overblown (Game Jam)</a>
+                        <a href="ProjectPages/RetroHelper.html">AI Chatbot</a>
+                        <a href="ProjectPages/gamedesignDocument.html">Jackbox GDD</a>
+                        <a href="ProjectPages/animatic.html">Animatic</a>
+                        <a href="ProjectPages/3dArtAnimation.html">3D Art & Animation</a>
+                    </div>
+                </div>
+                <p><a href="about.html">About/Resume</a></p>
                 <p><a href="contact.html">Contact</a></p>
             </nav>
         </div>
@@ -25,76 +36,85 @@
         <div class="hero grid-area-stack4">
             <img src="images/me coding!.png" alt="image">
             <div class="hero--content">
-                <h2>Coding!</h2>
+                <h2>All Projects</h2>
+            </div>
         </div>
-        </div>
+
         <div class="split">
-            <h4>Featured Projects</h4>
+            <h4>Game Design & Development</h4>
         </div>
         <div class="cards">
             <div class="card">
                 <h3>BendsTD</h3>
-                <video src="images/RetroHelper Demo.mp4" autoplay loop muted></video>
-                <p>Ever pick up and put down a game for months then forget everything? Well here is a bot to spoiler free help you remember all that youve done!</p>
-                <a href="ProjectPages/RetroHelper.html">Visit Project</a>
+                <video src="images/bendsTD-demo.mp4" autoplay loop muted></video>
+                <p>A 3D tower defense prototype built in Unity to showcase game design and C# programming skills.</p>
+                <a href="ProjectPages/bendTD.html">Visit Project</a>
             </div>
             <div class="card">
                 <h3>Halloween Skeeball Defense</h3>
-                <img src="images/miles color.png" alt="image">
-                <p>Check out an ongoing project to make a spiderman Short!</p>
+                <img src="images/skeeball-photo.jpg" alt="Skeeball machine">
+                <p>A physical-digital hybrid game combining a custom-built skeeball machine with a digital tower-defense game.</p>
                 <a href="ProjectPages/halloweenSB.html">Visit Project</a>
             </div>
             <div class="card">
-                <h3>Fusion Fest</h3>
-                <img src="images/Login.png" alt="image">
-                <p>Client Side able to log into a network and access a databse!</p>
-                <a href="ProjectPages/fusionfest.html">Visit Project</a>
-            </div>
-            <div class="card">
                 <h3>Overblown!</h3>
-                <img src="images/Login.png" alt="image">
-                <p>A Gamejam where the theme was "Bubble", want to know more?</p>
+                <img src="images/overblown-game.png" alt="Overblown game screenshot">
+                <p>A 2D platformer about a bubble, created in 48 hours for a game jam. I programmed the player controller.</p>
                 <a href="ProjectPages/overblown.html">Visit Project</a>
             </div>
-            <div class="card">
-                <h3>JackBox Game Design Document</h3>
-                <img src="images/Login.png" alt="image">
-                <p>Client Side able to log into a network and access a databse!</p>
-                <a href="ProjectPages/gamedesignDocument.html">Visit Project</a>
-            </div>
-            <div class="card">
-                <h3>Loud House Animatic</h3>
-                <img src="images/Login.png" alt="image">
-                <p>Client Side able to log into a network and access a databse!</p>
-                <a href="ProjectPages/animatic.html">Visit Project</a>
-            </div>
+        </div>
+
+        <div class="split">
+            <h4>Technical Art & Engineering</h4>
+        </div>
+        <div class="cards">
             <div class="card">
                 <h3>Maya Rigging Utility</h3>
-                <img src="images/PugTexture.png" alt="image">
-                <p>Check out an ongoing project to make a spiderman Short!</p>
+                <img src="images/maya-rigging-demo.gif" alt="Maya Rigging Tool GIF">
+                <p>A Python script for Maya that automates the "zero-out" offset group process for rigging.</p>
                 <a href="ProjectPages/mayaRigging.html">Visit Project</a>
             </div>
             <div class="card">
                 <h3>AI Retro Helper</h3>
-                <img src="images/RetroHelper Demo.mp4" alt="image">
-                <p>Check out an AI chatbot made for old retrogames!</p>
+                <video src="images/RetroHelper-Demo.mp4" autoplay loop muted></video>
+                <p>An AI-powered chatbot that gives spoiler-free hints for retro games based on player progress.</p>
                 <a href="ProjectPages/RetroHelper.html">Visit Project</a>
             </div>
         </div>
-        </div>
-        <!-- JAVA SCRIPT SCROLL CODE -->
-        <script src="script.js"></script>
-        <script>
-            window.addEventListener('scroll', function() {
-              var nav = document.querySelector('.grid1');
-          
-              if (window.scrollY > 0) {
-                nav.classList.add('grid1--scrolled');
-              } else {
-                nav.classList.remove('grid1--scrolled');
-              }
-            });
-          </script>
 
+        <div class="split">
+            <h4>Creative Design & Storytelling</h4>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <h3>Fusion Fest</h3>
+                <img src="images/fusionfest-photo.jpg" alt="Fusion Fest event">
+                <p>Co-Founder and Event Designer for a multimedia "game jam" that is now an annual tradition at CLU.</p>
+                <a href="ProjectPages/fusionfest.html">Visit Project</a>
+            </div>
+            <div class="card">
+                <h3>JackBox Game Design Doc</h3>
+                <img src="images/gdd-cover.png" alt="GDD Cover Page">
+                <p>A complete 20-page Game Design Document for a Jackbox-style party game focused on [key mechanic].</p>
+                <a href="ProjectPages/gamedesignDocument.html">Visit Project</a>
+            </div>
+            <div class="card">
+                <h3>Loud House Animatic</h3>
+                <img src="images/animatic-still.png" alt="Animatic storyboard">
+                <p>A 2-minute animatic created on personal initiative from a professional TV script to practice storyboarding.</p>
+                <a href="ProjectPages/animatic.html">Visit Project</a>
+            </div>
+            <div class="card">
+                <h3>3D Art & Animation</h3>
+                <img src="images/spiderman-render.png" alt="Spiderman 3D Model">
+                <p>A collection of 3D artwork, including a high-poly Spider-Man model and a short animated scene.</p>
+                <a href="ProjectPages/3dArtAnimation.html">Visit Project</a>
+            </div>
+        </div>
+
+    </div> <footer class="site-footer">
+        <p>&copy; 2025 Max Orywal. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
     </body>
 </html>
