@@ -219,9 +219,9 @@ nav > p > a:hover {
 }
 
 .cta-container {
-    /* This centers the button and gives it space */
+
     text-align: center;
-    padding: 40px 20px 60px 20px; /* Adds space above/below */
+    padding: 40px 20px 60px 20px;
 }
 
 .btn-primary {
@@ -556,4 +556,50 @@ video{
 
 .dropdown-content a:hover {
     background-color: var(--color-light);
+}
+
+.project-meta {
+    background-color: var(--color-darkB); 
+    color: var(--color-white);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 0 var(--spacing); 
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+
+}
+
+
+.project-title {
+    grid-column: 1 / -1; 
+    
+    border-bottom: 2px solid var(--color-B); 
+    padding-bottom: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-title h2 {
+    margin: 0; 
+    font-size: 2.5rem; 
+    color: var(--color-white); 
+}
+
+
+.meta-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.meta-item strong {
+    font-size: 0.9rem;
+    color: var(--color-light); 
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.25rem;
+}
+
+.meta-item span {
+    font-size: 1.1rem;
+    font-weight: bold;
 }

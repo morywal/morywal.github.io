@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Max's Portfolio - Fusion Fest</title>
+    <title>Max's Portfolio - Retro Helper!</title>
     <link rel="stylesheet" href="../style.css">
 </head>
     <body>
@@ -14,7 +14,6 @@
             </header>
             <nav>
                 <p><a href="../index.html">Home</a></p>
-
                 <div class="nav-item dropdown">
                     <p class="nav-link"><a href="../work.html">Projects</a></p>
                     <div class="dropdown-content">
@@ -24,7 +23,7 @@
                         <a href="mayaRigging.html">Maya Rigging Tool</a>
                         <a href="overblown.html">Overblown (Game Jam)</a>
                         <a href="RetroHelper.html">AI Chatbot</a>
-                        <a href="gamedesignDocument.html">Jackbox GDD</a>
+                        <a href="gamedesignDocument.html">Transparency! GDD</a>
                         <a href="animatic.html">Animatic</a>
                         <a href="3dArtAnimation.html">3D Art & Animation</a>
                     </div>
@@ -32,91 +31,106 @@
                 <p><a href="../about.html">About/Resume</a></p>
                 <p><a href="../contact.html">Contact</a></p>
             </nav>
-        </div>
-
-        <div class="hero grid-area-stack3">
-            <video src="../images/miles.mp4" autoplay loop muted></video>
-            <div class="hero--content">
-                <h2>The Fusion Fest</h2>
-            </div>
-        </div>
-
-        <div class="project-body">
-            
-            <div class="project-section">
-                <h2>The Project: A Multimedia Jam</h2>
-                <p>
-                    <strong>My Role:</strong> Co-Founder, Event Designer, & Project Manager
-                </p>
-                <p>
-                    I co-founded and designed 'Fusion Fest,' a 48-hour multimedia jam, to foster a new culture of collaboration within the CLU Multimedia program. My role involved pitching the concept to faculty, designing the event structure, and mentoring student teams. The event was a major success and is now an annual tradition.
-                </p>
             </div>
 
-            <div class="project-section">
-                <h2>The Process: From Pitch to Event</h2>
-                <p>
-                    <strong>The Challenge:</strong> The multimedia program had many talented students but lacked a high-energy, collaborative event to bring them together and build community.
-                </p>
-                <p>
-                    <strong>My Solution:</strong> I designed 'Fusion Fest' to solve this. My responsibilities included:
-                </p>
-                <ul>
-                    <li>Writing the initial pitch and design document to get faculty buy-in.</li>
-                    <li>Designing the theme, creative constraints, and judging criteria.</li>
-                    <li>Structuring the 48-hour schedule to balance work-time with mentorship.</li>
-                    <li>Managing event logistics and communication with student teams.</li>
-                </ul>
-
-                <div class="project-media-row">
-                    <div class="project-media-item">
-                        <h3>Event Pitch Slideshow</h3>
-                        <video src="../images/fusionfest_slideshow_video.mp4" controls></video>
-                        <p>A video walkthrough of the final pitch deck I presented to faculty, outlining the event's goals and structure.</p>
-                    </div>
-                    <div class="project-media-item">
-                        <h3>Original Pitch Document</h3>
-                        <a href="../path/to/your/pitch-doc.pdf" target="_blank">
-                            <img src="../images/pitch_doc_screenshot.png" alt="Screenshot of the pitch document">
-                        </a>
-                        <p>A screenshot of the original design document used to define the project scope. (Click to view PDF)</p>
-                    </div>
+            <div class="project-meta">
+                <div class="project-title">
+                    <h2>AI Retro Game Helper</h2>
+                </div>
+                <div class="meta-item">
+                    <strong>My Role:</strong>
+                    <span>Solo Developer & Designer</span>
+                </div>
+                <div class="meta-item">
+                    <strong>Date Created:</strong>
+                    <span>May 2025</span>
+                </div>
+                <div class="meta-item">
+                    <strong>Context:</strong>
+                    <span>Senior Capstone Project (CLU)</span>
+                </div>
+                <div class="meta-item">
+                    <strong>Skills:</strong>
+                    <span>Python, AI (OpenAI API), UI (Tkinter), API Integration, JSON</span>
                 </div>
             </div>
 
-            <div class="project-section">
-                <h2>The Results: Student Projects</h2>
-                <p>
-                    The event produced [X number] of diverse projects. Here is a small selection of the games, animations, and interactive stories created by the student teams.
-                </p>
-                
-                <div class="project-gallery">
-                    <div class="gallery-item">
-                        <img src="../images/project_1.png" alt="Student Project 1">
-                        <p>Project Title 1</p>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="../images/project_2.png" alt="Student Project 2">
-                        <p>Project Title 2</p>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="../images/project_3.png" alt="Student Project 3">
-                        <p>Project Title 3</p>
+            <div class="project-body">
+
+                <div class="project-section">
+                    <h2>The Project: A Spoiler-Free AI Helper</h2>
+                    <p>
+                        <strong>The Problem:</strong> I often start a game, run out of time to play, and put it down for months. When I come back, I remember the core story but have forgotten 
+                        crucial details like names, places, and side quests.
+                    </spp>
+                    <p>
+                        <strong>My Solution:</strong> I built a standalone AI chatbot that integrates with the RetroArch emulator. The bot reads data from the emulator's console and tracks the 
+                        player's progress. When the player asks a question, the AI cross-references their progress with a game-data (JSON) file to provide a <strong>spoiler-free, context-aware</strong> 
+                        answer.
+                    </spp>
+                </div>
+
+                <div class="project-section">
+                    <h2>The Retro Helper Integration</h2>
+                    <p>
+                        The application was built as an add-on to RetroArch, which required me to research its documentation to understand how to read its console output in real-time.
+                    </spp>
+
+                    <div class="project-media-row">
+                        <div class="project-media-item">
+                            <h3>Live Game Detection</h3>
+                            <video src="../images/RetroHelper Demo.mp4" controls></video>
+                            <p>A video walkthrough of the chatbot detecting which game is running and when a new game is loaded or unloaded.</p>
+                        </div>
+                        <div class="project-media-item">
+                            <h3>AI Chatbot UI (Python)</h3>
+                            <img src="../images/RetrohelperImage.png" alt="Screenshot of AI brain">
+                            <p>A screenshot of the chatbot's UI (built in Tkinter) responding to a user's question.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="project-section">
-                <h2>The Impact: A New Tradition</h2>
-                <p>
-                    The first Fusion Fest was a huge success, with over 30 students participating and 10 projects completed. Based on the positive feedback, the multimedia department adopted it as an <strong>annual tradition</strong>, which was my ultimate goal and proudest achievement from this project.
-                </p>
-            </div>
+                <div class="project-section">
+                    <h2>A Peek Inside the Code (Python)</h2>
+                    <p>
+                        Screenshots of the bot's console and the back-end systems I built.
+                    </spp>
+                    <div class="project-gallery">
+                        <div class="gallery-item">
+                            <img src="../images/IsRArunning.png" alt="is RA running">
+                            <p>A Python script to verify that the RetroArch process is running before initiating the bot.</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../images/ConsoleReading.png" alt="Reading the console">
+                            <p>This script monitors the emulator's console log to detect which game the user is currently playing.</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../images/REtroGameData.png" alt="Game data from a json file">
+                            <p>A snippet showing the bot parsing a JSON file containing all game data, lore, and story beats for a specific game.</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../images/RetroInput.png" alt="Retro Input">
+                            <p>The main input loop for capturing, processing, and sending the user's questions to the AI API.</p>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="project-section">
+                    <h2>Impact & Reflection</h2>
+                    <p>
+                        This was my Capstone project, showcasing my heavy programming and design skills. This took months to research, design, and implement. It was a real 
+                        challenge, especially since it was my first time really delving into Git documents to learn and use other people's collaborative tools.
+                    </spp>
+                    <p>
+                        I want to polish and **publish** this app in its entirety one day, as I still have this problem with other games. It was the culmination of my CS degree.
+                    </spp>
+                </div>
+
+            </div> 
+        </div> 
         <script src="../script.js"></script>
-    
-    <footer class="site-footer">
-        <p>&copy; Designed & Coded by Max Orywal, 2025.</p>
+        <footer class="site-footer">
+            <p>&copy; Designed & Coded by Max Orywal, 2025.</p>
         </footer>
-</body>
+    </body>
 </html>
