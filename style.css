@@ -98,7 +98,7 @@ body{
     padding: var(--spacing);
 }
 
-.grid1{ /* -- Header Grid + nav bar -- */
+.grid1{ 
     display: grid;
     grid-template-columns: 1fr 4fr;
     border-bottom: thin solid black;
@@ -601,5 +601,114 @@ video{
 
 .meta-item span {
     font-size: 1.1rem;
+ 
     font-weight: bold;
+}
+
+.project-screenshot {
+    margin: 1.5rem 0;
+}
+
+.project-screenshot img {
+    width: 100%;
+    height: auto; 
+    border: 1px solid #ddd;
+    box-shadow: var(--shadow);
+    border-radius: 0.5rem;
+}
+
+.project-screenshot p {
+    text-align: center;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+.about-header {
+    display: grid;
+    grid-template-columns: 1fr 2fr; 
+    gap: var(--spacing);
+    align-items: center;
+}
+
+.about-headshot img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%; 
+    border: 5px solid var(--color-light);
+}
+
+.about-bio h2 {
+    margin-top: 0;
+    color: var(--color-darkB);
+}
+
+.about-bio p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.skills-category h3 {
+    color: var(--color-darkB);
+    border-bottom: 2px solid var(--color-light);
+    padding-bottom: 0.5rem;
+}
+
+.skills-category ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.skills-category ul li {
+    padding: 0.4rem 0;
+    font-size: 1.05rem;
+}
+
+.social-links {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.social-links span {
+    color: var(--color-wolfgray);
+    margin: 0 1rem;
+}
+.social-links a {
+    text-decoration: none;
+    color: var(--color-B);
+    transition: color 0.3s ease;
+}
+.social-links a:hover {
+    color: var(--color-darkB);
+    text-decoration: underline;
+}
+
+.contact-email a {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--color-darkB);
+    text-decoration: none;
+}
+.contact-email a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .about-header {
+        grid-template-columns: 1fr; 
+        text-align: center;
+    }
+    .about-headshot img {
+        width: 200px; 
+        height: 200px;
+        margin-bottom: 1rem;
+    }
 }
