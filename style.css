@@ -712,3 +712,21 @@ video{
         margin-bottom: 1rem;
     }
 }
+
+/* For Youtube */
+.slideshow-container {
+    width: 100%;
+    max-width: 960px; 
+    margin: 1rem auto; 
+    border: 1px solid #ddd;
+    box-shadow: var(--shadow);
+    border-radius: 0.5rem;
+    overflow: hidden; 
+}
+
+.slideshow-container iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9; 
+    border: none; 
+    display: block; 
+}
