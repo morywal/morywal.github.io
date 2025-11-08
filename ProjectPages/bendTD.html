@@ -1,18 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!--  TO DO:  
-
-- create script for video 
-- create content and video
-- screenshot important info and display code, different AI and such, etc. 
-
-
--->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Max's Portfolio - BendTD</title>
+    <title>Max's Portfolio - BendsTD</title>
     <link rel="stylesheet" href="../style.css">
 </head>
     <body>
@@ -23,14 +14,12 @@
             </header>
             <nav>
                 <p><a href="../index.html">Home</a></p>
-
                 <div class="nav-item dropdown">
                     <p class="nav-link"><a href="../work.html">Projects</a></p>
                     <div class="dropdown-content">
                         <a href="bendTD.html">BendsTD</a>
                         <a href="halloweenSB.html">Halloween Skeeball</a>
                         <a href="fusionfest.html">Fusion Fest</a>
-                        <!-- <a href="mayaRigging.html">Maya Rigging Tool</a> -->
                         <a href="overblown.html">Overblown (Game Jam)</a>
                         <a href="RetroHelper.html">AI Chatbot</a>
                         <a href="gamedesignDocument.html">Transparency! GDD</a>
@@ -43,87 +32,137 @@
         </div>
 
         <div class="hero grid-area-stack3">
-            <video src="../images/miles.mp4" autoplay loop muted></video>
+            <video src="../images/BendsTD_Hero_Loop.mp4" autoplay loop muted></video>
             <div class="hero--content">
-                <h2>BendTD -- Under Construction</h2>
+                <h2>BendsTD</h2>
+            </div>
+        </div>
+
+        <div class="project-meta">
+            <div class="project-title">
+                <h2>BendsTD (3D Tower Defense)</h2>
+            </div>
+            <div class="meta-item">
+                <strong>My Role:</strong>
+                <span>Solo Developer, Game Designer, C# Programmer</span>
+            </div>
+            <div class="meta-item">
+                <strong>Date Created:</strong>
+                <span>October 2025</span>
+            </div>
+            <div class="meta-item">
+                <strong>Context:</strong>
+                <span>Personal Project</span>
+            </div>
+            <div class="meta-item">
+                <strong>Tech Stack:</strong>
+                <span>Unity, C#, Cinemachine, AI Navigation, Shader Graph</span>
             </div>
         </div>
 
         <div class="project-body">
+            
             <div class="project-section">
-                <h2>The Project: </h2>
+                <h2>The Project: An Active Tower Defense</h2>
                 <p>
-                    <strong>My Role:</strong> Co-Founder, Event Designer, & Project Manager
+                    BendsTD is a 3D, third-person tower defense game that subverts the genre's passive formula. Instead of just being a "sky-god" builder, 
+                    the player is an active combatant on the field, fighting alongside their towers.
                 </p>
                 <p>
-                    
+                    My goal was to create a feature-rich, systems-heavy prototype from scratch to prove my "hybrid" identity as a technical designer. 
+                    This document and the video below are the proof of that work.
                 </p>
             </div>
 
             <div class="project-section">
-                <h2>The Process: </h2>
+                <h2>Developer Walkthrough (Creative Work Sample)</h2>
                 <p>
-                    <strong>The Challenge:</strong> 
+                    This 6-minute video is my primary creative sample for my USC application. It's a full developer-narrated walkthrough of the game's design, systems, and technical "magic."
                 </p>
-                <p>
-                    <strong>My Solution:</strong> 
+                <div class="slideshow-container">
+                    <iframe 
+                        src="[YOUR_UNLISTED_YOUTUBE_EMBED_LINK_HERE]" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <p style="text-align: center; font-style: italic;">
+                    My full 6-minute developer walkthrough, as submitted to USC.
                 </p>
-                <ul>
-                    <li>Writing the initial pitch and design document to get faculty buy-in.</li>
-                    <li>Designing the theme, creative constraints, and judging criteria.</li>
-                    <li>Structuring the 48-hour schedule to balance work-time with mentorship.</li>
-                    <li>Managing event logistics and communication with student teams.</li>
-                </ul>
+                </div>
 
+            <div class="project-section">
+                <h2>Abilities</h2>
+                <p>My ability kit was designed to create deep, strategic gameplay.</p>
+                
                 <div class="project-media-row">
                     <div class="project-media-item">
-                        <h3>Event Pitch Slideshow</h3>
-                        <video src="../images/fusionfest_slideshow_video.mp4" controls></video>
-                        <p>A video walkthrough of the final pitch deck I presented to faculty, outlining the event's goals and structure.</p>
+                        <h3>Problem: Ground Swarms</h3>
+                        <img src="../images/SoldierSS.png" alt="A Soldier Enemy">
+                        <p>This is a basic Soldier</p>
                     </div>
                     <div class="project-media-item">
-                        <h3>Original Pitch Document</h3>
-                        <a href="../path/to/your/pitch-doc.pdf" target="_blank">
-                            <img src="../images/pitch_doc_screenshot.png" alt="Screenshot of the pitch document">
-                        </a>
-                        <p>A screenshot of the original design document used to define the project scope. (Click to view PDF)</p>
+                        <h3>Solution: Mud Pit</h3>
+                        <img src="../images/" alt="The Mud Pit ability in action">
+                        <p>The "Mud Pit" is a crowd-control tool that slows enemies, giving the player strategic time to defend.</p>
+                    </div>
+                </div>
+                
+                <div class="project-media-row" style="margin-top: 1.5rem;">
+                    <div class="project-media-item">
+                        <h3>Problem: Flying Units</h3>
+                        <img src="../images/lobberSS.png" alt="A flying Lobber enemy">
+                        <p>The `LobberAI` flies over the Mud Pit, ignoring the trap and attacking the player from a distance.</p>
+                    </div>
+                    <div class="project-media-item">
+                        <h3>Solution: Earthen Wall</h3>
+                        <img src="../images/BendsTD_EarthenWall.png" alt="The Earthen Wall ability">
+                        <p>The "Earthen Wall" is a high-skill, charge-based projectile. It's the only tool that can hit flying units, but it locks the player in place, creating a "risk vs. reward" choice.</p>
                     </div>
                 </div>
             </div>
 
             <div class="project-section">
-                <h2>The Results: </h2>
+                <h2>A Peek Inside: The Systems</h2>
+                <p>
+                    This project is driven by several complex, interconnected C# systems. Here is a look at the "magic" behind the scenes.
+                </p>
+                <div class="project-gallery">
+                    <div class="gallery-item">
+                        <img src="../images/AIDirector.png" alt="AI Director Inspector">
+                        <p>My "AI Director" script in the Inspector. All settings are exposed so I can balance the difficulty without recompiling code.</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/BendsTD_Code.png" alt="C# Code Snippet of AI Brain">
+                        <p>A C# snippet from the `BossAI.cs` script, showing the logic for its "Leap Attack" and "Punch Attack" states.</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/BTDconsole.png" alt="Unity Debug Console">
+                        <p>The live debug console, printing status updates from the AI Director and Wave Spawner as I playtest.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <h2>Future Vision & Next Steps</h2>
+                <p>
+                    I am incredibly proud of this technical foundation, but I also recognize its gaps. My future vision for this project is to evolve it from a "prototype" into a true "player experience."
+                </p>
+                <ul>
+                    <li><strong>Integrate a Narrative:</strong> I would weave a compelling story into the game, giving the player a *reason* to protect the Core.</li>
+                    <li><strong>Add a Roguelike System:</strong> After each wave, the player would get a choice of three random upgrades, making every playthrough a unique mix of skill and luck.</li>
+                    <li><strong>Focus on "Game Feel":</strong> I would move beyond just "functional" and into "impactful"—adding layered sound design, particle effects, and screen shake.</li>
+                </ul>
                 <p>
                     
                 </p>
-                
-                <div class="project-gallery">
-                    <div class="gallery-item">
-                        <img src="../images/project_1.png" alt="Student Project 1">
-                        <p>Project Title 1</p>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="../images/project_2.png" alt="Student Project 2">
-                        <p>Project Title 2</p>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="../images/project_3.png" alt="Student Project 3">
-                        <p>Project Title 3</p>
-                    </div>
-                </div>
-            </div>
+            </div> 
 
-            <div class="project-section">
-                <h2>The Impact: </h2>
-                <p>
-
-                </p>
-            </div>
-
-        <script src="../script.js"></script>
+        </div> </div> <script src="../script.js"></script>
     
     <footer class="site-footer">
         <p>&copy; Designed & Coded by Max Orywal, 2025.</p>
-        </footer>
+    </footer>
 </body>
 </html>
