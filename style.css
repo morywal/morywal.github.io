@@ -109,6 +109,7 @@ body{
     height: 70px;
     background-color: var(--color-wolfgray);
     transition: background-color 0.3s ease;
+    z-index: 1000;
 }
 
 .grid1--scrolled{
@@ -511,6 +512,18 @@ video{
 
 .site-footer p {
     margin: 0; 
+}
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    flex-grow: 1;
 }
 
 /* This is Nav Bar Work */
