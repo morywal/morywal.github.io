@@ -493,7 +493,10 @@ video{
     font-style: italic;
     font-size: 0.9rem;
 }
-
+.project-gallery--natural .gallery-item img {
+    aspect-ratio: auto;
+    object-fit: fill;
+}
 /* This is Basic Footer Work */
 
 .site-footer {
