@@ -14,17 +14,12 @@
     --shadow: 0 0 0.5rem rgba(0,0,0,0.35);
 }
 .wrapper{
-    margin-inline: auto;
     max-width: 1000px;
-    display: grid;
-    width: 100%;
-    height: auto;
-    grid-template-areas:
-      "grid1"
-      "cards"
-      "main";
-      grid-template-columns: 1fr;
-      grid-template-rows: auto;
+    margin-inline: auto; /* This centers the container */
+    flex-grow: 1; /* Keep this for your sticky footer setup */
+    padding-inline: 1.5rem; /* (e.g., 24px padding on left/right) */
+
+
 }
 
 @media (prefers-color-scheme: dark) {
