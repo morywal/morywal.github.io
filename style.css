@@ -24,8 +24,11 @@
 
 @media (prefers-color-scheme: dark) {
     /* Apply dark mode styles here */
+    body {
+        background-color: var(--color-black);
+    }
+
     .wrapper {
-        /* Example dark mode style */
         background-color: var(--color-black);
         color: var(--color-white);
     }
@@ -413,6 +416,7 @@ video{
     margin: var(--spacing);
     border-radius: 0.5rem;
     box-shadow: var(--shadow);
+    color: var(--color-black); 
 }
 
 /* This adds a nice dividing line between sections */
