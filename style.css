@@ -1,4 +1,3 @@
-/* -- Page Setup -- */
 *, *::after, *::before{
     box-sizing: border-box;
 }
@@ -15,15 +14,14 @@
 }
 .wrapper{
     max-width: 1000px;
-    margin-inline: auto; /* This centers the container */
-    flex-grow: 1; /* Keep this for your sticky footer setup */
-    padding-inline: 1.5rem; /* (e.g., 24px padding on left/right) */
+    margin-inline: auto; 
+    flex-grow: 1;
+    padding-inline: 1.5rem; 
 
 
 }
 
 @media (prefers-color-scheme: dark) {
-    /* Apply dark mode styles here */
     body {
         background-color: var(--color-black);
     }
@@ -34,27 +32,23 @@
     }
 }
 .dark-mode {
-    /* Add your dark mode styles here */
     background-color: var(--color-black);
     color: var(--color-white);
 }
 
 body{
-    /* line-height: 1.5; */
     background-color: var(--color-light);
     margin-top: 0px; 
     margin-bottom: 0px;
     margin-left: 0px;
     margin-right: 0px;
-    /* add font family 
-    font-family: var();
-    */
     
 }
+
 /* -- Main Divs -- */
 
 
-.cards{  /* -- Card Div -- */
+.cards{ 
     display: flex;
     flex-wrap: wrap;
     gap: var(--spacing);
@@ -111,12 +105,6 @@ header{
    grid-column: 1;
 }
 nav{
-    /*
-    grid-column: 2;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-column: 2;
-    */
     display: flex; 
     justify-content: flex-end; 
     align-items: center; 
@@ -152,8 +140,6 @@ nav{
     margin-right: auto;
     width: fit-content;
     
-    /* Box Shadow */
-    /*box-shadow: var(--shadow); */
 }
 .card1 > a:hover{
     border: thick solid var(--color-darkB);
@@ -179,8 +165,6 @@ nav{
     margin-right: auto;
     width: fit-content;
     
-    /* Box Shadow */
-    /*box-shadow: var(--shadow); */
 }
 
 .card1 > a:hover{
@@ -362,8 +346,6 @@ video{
     margin-right: auto;
     width: fit-content;
     
-    /* Box Shadow */
-    /*box-shadow: var(--shadow); */
 }
 .row2 > a:hover{
     border: thick solid var(--color-darkB);
@@ -385,8 +367,6 @@ video{
     margin-right: auto;
     width: fit-content;
     
-    /* Box Shadow */
-    /*box-shadow: var(--shadow); */
 }
 .row21 > a:hover{
     border: thick solid var(--color-darkB);
