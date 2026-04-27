@@ -246,6 +246,18 @@ nav > p > a:hover::after {
     display: inline-block;
 }
 
+/* Invisible bridge: extends the hover zone over the gap between
+   trigger and dropdown so :hover persists during cursor travel */
+.nav-item.dropdown::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: -10px;
+    right: -10px;
+    height: 10px;
+    z-index: 11;
+}
+
 .nav-item.dropdown .nav-link {
     margin: 0;
 }
@@ -306,10 +318,15 @@ nav > p > a:hover::after {
     opacity: 0;
     visibility: hidden;
     transform: translateY(-6px);
+    /*
+       On HIDE: delay visibility by 250ms so the cursor has time
+       to cross the bridge gap without dismissing the menu.
+       On SHOW: overridden below — visibility becomes instant.
+    */
     transition:
-        opacity 180ms var(--ease-out),
-        transform 180ms var(--ease-out),
-        visibility 180ms;
+        opacity 200ms var(--ease-out),
+        transform 200ms var(--ease-out),
+        visibility 0ms 250ms;
     pointer-events: none;
 }
 
@@ -318,6 +335,11 @@ nav > p > a:hover::after {
     visibility: visible;
     transform: translateY(0);
     pointer-events: auto;
+    /* Override: no delay when showing */
+    transition:
+        opacity 180ms var(--ease-out),
+        transform 180ms var(--ease-out),
+        visibility 0ms 0ms;
 }
 
 .dropdown-content a {
@@ -1225,3 +1247,145 @@ nav > p > a:hover::after {
 
     .dropdown-content { min-width: 190px; }
 }
+
+/* ═══════════════════════════════════════════════════════════
+   HARDWARE PARALLAX BACKGROUND
+   Three-layer PCB aesthetic: grid → traces → nodes.
+   Injected by script.js; all motion via translate3d (GPU).
+═══════════════════════════════════════════════════════════ */
+
+/* Fixed full-screen container — sits below everything */
+.hw-parallax {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Each layer is oversized 16% so edge-gaps never show during shift */
+.hw-layer {
+    position: absolute;
+    inset: -8%;
+    width: 116%;
+    height: 116%;
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+}
+
+/* ─── Layer 1: Large IC footprints + multi-scale PCB grid ─── */
+.hw-layer--bg {
+    background-color: var(--bg-base);
+    /* Four gradients create a coarse + fine grid — classic PCB layout ruler */
+    background-image:
+        linear-gradient(rgba(26, 40, 60, 0.45) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(26, 40, 60, 0.45) 1px, transparent 1px),
+        linear-gradient(rgba(18, 28, 42, 0.25) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(18, 28, 42, 0.25) 1px, transparent 1px);
+    background-size: 24px 24px, 24px 24px, 96px 96px, 96px 96px;
+    opacity: 1;
+}
+
+/* ─── Layer 2: Main signal traces, bus lines, component pads ─── */
+/*
+   SVG tile: 200×200. Contains:
+   - An L-shaped signal trace with via-hole markers at corners
+   - A thick horizontal bus line (data bus)
+   - A vertical branch trace
+   - Two SMD resistor pad footprints
+   Colors are very dark rgb() values — no # encoding needed.
+*/
+.hw-layer--mid {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cpath d='M0,40 L70,40 L70,100 L140,100 L140,160 L200,160' fill='none' stroke='rgb(30,50,80)' stroke-width='1.2'/%3E%3Ccircle cx='70' cy='40' r='4.5' fill='none' stroke='rgb(34,211,238)' stroke-width='0.7' opacity='0.28'/%3E%3Ccircle cx='70' cy='40' r='1.8' fill='rgb(34,211,238)' opacity='0.22'/%3E%3Ccircle cx='140' cy='100' r='4.5' fill='none' stroke='rgb(34,211,238)' stroke-width='0.7' opacity='0.28'/%3E%3Ccircle cx='140' cy='100' r='1.8' fill='rgb(34,211,238)' opacity='0.22'/%3E%3Cline x1='0' y1='120' x2='200' y2='120' stroke='rgb(22,36,55)' stroke-width='2.2'/%3E%3Cline x1='160' y1='0' x2='160' y2='75' stroke='rgb(22,36,55)' stroke-width='0.9'/%3E%3Cpath d='M160,75 L200,75' fill='none' stroke='rgb(22,36,55)' stroke-width='0.9'/%3E%3Crect x='10' y='162' width='13' height='8' rx='1' fill='none' stroke='rgb(26,42,62)' stroke-width='0.8'/%3E%3Crect x='28' y='162' width='13' height='8' rx='1' fill='none' stroke='rgb(26,42,62)' stroke-width='0.8'/%3E%3Cline x1='23' y1='166' x2='28' y2='166' stroke='rgb(26,42,62)' stroke-width='0.8'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+    opacity: 0.8;
+}
+
+/* ─── Layer 3: Fine detail traces, via holes, resistor footprints ─── */
+/*
+   Faster-moving — creates depth separation from mid layer.
+   SVG tile: 96×96. Fine traces + glowing via node.
+*/
+.hw-layer--fg {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96'%3E%3Cline x1='0' y1='32' x2='96' y2='32' stroke='rgb(22,40,62)' stroke-width='0.5'/%3E%3Cline x1='48' y1='0' x2='48' y2='48' stroke='rgb(22,40,62)' stroke-width='0.5'/%3E%3Cpath d='M48,48 L72,48 L72,96' fill='none' stroke='rgb(22,40,62)' stroke-width='0.5'/%3E%3Ccircle cx='72' cy='48' r='4' fill='none' stroke='rgb(34,211,238)' stroke-width='0.7' opacity='0.38'/%3E%3Ccircle cx='72' cy='48' r='1.6' fill='rgb(34,211,238)' opacity='0.32'/%3E%3Crect x='8' y='70' width='7' height='4' rx='0.5' fill='none' stroke='rgb(34,211,238)' stroke-width='0.5' opacity='0.22'/%3E%3Crect x='19' y='70' width='7' height='4' rx='0.5' fill='none' stroke='rgb(34,211,238)' stroke-width='0.5' opacity='0.22'/%3E%3Cline x1='15' y1='72' x2='19' y2='72' stroke='rgb(34,211,238)' stroke-width='0.5' opacity='0.22'/%3E%3C/svg%3E");
+    background-size: 96px 96px;
+    opacity: 0.85;
+}
+
+/* ─── Data nodes: injected by JS at random positions ─── */
+/*
+   Pulse like active data packets traveling a bus —
+   the game-design equivalent of "unit health regenerating".
+*/
+.hw-node {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: nodeGlow var(--node-dur, 3s) var(--node-delay, 0s) ease-in-out infinite;
+}
+
+@keyframes nodeGlow {
+    0%, 100% { opacity: 0.1;  transform: scale(1); }
+    50%       { opacity: 0.6;  transform: scale(1.5); }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   GLASSMORPHISM UPGRADE
+   Content containers "float" above the hardware layer —
+   semi-transparent with backdrop-filter blur.
+   The blur only works when there is something to blur behind it,
+   which is why the parallax background makes this pop.
+═══════════════════════════════════════════════════════════ */
+
+/* Cards float above the PCB */
+.card,
+.card1,
+.card3 {
+    background-color: rgba(15, 22, 35, 0.82);
+    backdrop-filter: blur(10px) saturate(1.2);
+    -webkit-backdrop-filter: blur(10px) saturate(1.2);
+}
+
+/* Project body panels — slightly more opaque for readability */
+.project-body {
+    background-color: rgba(15, 22, 35, 0.88);
+    backdrop-filter: blur(12px) saturate(1.2);
+    -webkit-backdrop-filter: blur(12px) saturate(1.2);
+}
+
+/* Meta banner — elevated glass */
+.project-meta {
+    background-color: rgba(22, 32, 50, 0.86);
+    backdrop-filter: blur(10px) saturate(1.2);
+    -webkit-backdrop-filter: blur(10px) saturate(1.2);
+}
+
+/* Dropdown — frosted glass panel */
+.dropdown-content {
+    background-color: rgba(22, 32, 50, 0.92);
+    backdrop-filter: blur(14px) saturate(1.3);
+    -webkit-backdrop-filter: blur(14px) saturate(1.3);
+}
+
+/* Skills category cards */
+.skills-category {
+    background-color: rgba(15, 22, 35, 0.78);
+    backdrop-filter: blur(8px) saturate(1.1);
+    -webkit-backdrop-filter: blur(8px) saturate(1.1);
+}
+
+/* Footer */
+.site-footer {
+    background-color: rgba(15, 22, 35, 0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Reduce motion: respect user preference */
+@media (prefers-reduced-motion: reduce) {
+    .hw-layer,
+    .hw-node { animation: none !important; transition: none !important; }
+}
+
