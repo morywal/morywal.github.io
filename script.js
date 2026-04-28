@@ -5,21 +5,10 @@ window.addEventListener('scroll', function () {
     nav.classList.toggle('grid1--scrolled', window.scrollY > 0);
 });
 
-/* ─── HARDWARE PARALLAX BACKGROUND ─────────────────────────────
-   Three-layer PCB aesthetic injected into <body> as a fixed
-   full-screen element. Runs via requestAnimationFrame with
-   lerp smoothing so layers trail the cursor naturally.
 
-   Depth multipliers:
-     BG  0.08 → barely moves (large, distant IC blocks)
-     Mid 0.22 → medium drift (main trace layer)
-     FG  0.45 → fastest shift (fine details, closest to viewer)
-
-   All transforms use translate3d() → GPU composited layer,
-   zero layout/paint cost at 60fps.
-─────────────────────────────────────────────────────────────── */
 (function () {
     /* ── Inject layer structure ── */
+    document.addEventListener('DOMContentLoaded', function() {
     var parallax = document.createElement('div');
     parallax.className = 'hw-parallax';
     parallax.setAttribute('aria-hidden', 'true');
@@ -117,4 +106,6 @@ window.addEventListener('scroll', function () {
     if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         requestAnimationFrame(tick);
     }
+    });
 }());
+

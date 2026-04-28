@@ -68,7 +68,8 @@ html, body {
 }
 
 body {
-    background-color: var(--bg-base);
+    background-color: transparent;
+    position: relative;
     color: var(--text-primary);
     font-family: 'Inter', system-ui, sans-serif;
     font-size: 1rem;
@@ -120,6 +121,10 @@ video { width: 100%; height: auto; border-radius: var(--radius); }
     text-align: center;
     margin-inline: auto;
     max-width: 1000px;
+}
+
+.wrapper, .project-body {
+    background-color: transparent !important; 
 }
 
 /* ─── HUD NAVIGATION ─────────────────────────────────────────
@@ -1258,10 +1263,11 @@ nav > p > a:hover::after {
 .hw-parallax {
     position: fixed;
     inset: 0;
-    z-index: -1;
+    z-index: -2;
     overflow: hidden;
     pointer-events: none;
     user-select: none;
+    background-color: var(--bg-base);
 }
 
 /* Each layer is oversized 16% so edge-gaps never show during shift */
