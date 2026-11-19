@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max's Portfolio - Seismic Alert Monitor</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+    <body>
+        <div class="wrapper">
+            <div class="grid1">
+            <header>
+                <h1>Orywal</h1>
+            </header>
+            <nav>
+                <p><a href="../index.html">Home</a></p>
+
+                <div class="nav-item dropdown">
+                    <p class="nav-link"><a href="../work.html">Projects</a></p>
+                    <div class="dropdown-content">
+                        <a href="bendTD.html">BendsTD</a>
+                        <a href="halloweenSB.html">Halloween Skeeball</a>
+                        <a href="fusionfest.html">Fusion Fest</a>
+                        <!-- <a href="mayaRigging.html">Maya Rigging Tool</a> -->
+                        <a href="overblown.html">Overblown (Game Jam)</a>
+                        <a href="RetroHelper.html">AI Chatbot</a>
+                        <a href="seismic-monitor.html">Seismic Monitor</a>
+                        <a href="gamedesignDocument.html">Transparency! GDD</a>
+                        <a href="animatic.html">Animatic</a>
+                        <a href="3dArtAnimation.html">3D Art & Animation</a>
+                    </div>
+                </div>
+                <p><a href="../about.html">About/Resume</a></p>
+                </nav>
+            </div>
+
+            <div class="project-meta">
+                <div class="project-title">
+                    <h2>Seismic Alert &amp; Proximity Monitor</h2>
+                    <p class="project-subtitle">
+                        Live geospatial monitoring pipeline built in Java 17, automated via GitHub Actions CI/CD, and visualized with Leaflet.js.
+                    </p>
+                    <div class="project-actions">
+                        <a class="btn-primary" href="https://morywal.github.io/Seismic-Alert-Monitor/" target="_blank" rel="noopener">Live Fullscreen Map</a>
+                        <a class="btn-secondary" href="https://github.com/morywal/Seismic-Alert-Monitor" target="_blank" rel="noopener">View Source Code</a>
+                        <a class="btn-secondary" href="https://github.com/morywal/Seismic-Alert-Monitor/tree/main/docs" target="_blank" rel="noopener">Design Docs (SRS &amp; UML)</a>
+                    </div>
+                </div>
+                <div class="meta-item">
+                    <strong>My Role:</strong>
+                    <span>Solo Developer &amp; Designer</span>
+                </div>
+                <div class="meta-item">
+                    <strong>Data Source:</strong>
+                    <span>USGS Earthquake GeoJSON Feed</span>
+                </div>
+                <div class="meta-item">
+                    <strong>Refresh Rate:</strong>
+                    <span>Every 30 minutes (GitHub Actions)</span>
+                </div>
+                <div class="meta-item">
+                    <strong>Test Suite:</strong>
+                    <span>41 JUnit 5 tests</span>
+                </div>
+            </div>
+
+            <div class="project-body">
+
+                <div class="project-section">
+                    <h2>Live Interactive Demo</h2>
+                    <p>
+                        This map is live. It reads the JSON feed that the CI pipeline rebuilds from USGS data every 30 minutes. Click any marker to see the event's
+                        magnitude, depth, severity, and the rules it triggered.
+                    </p>
+                    <div class="map-embed">
+                        <iframe src="https://morywal.github.io/Seismic-Alert-Monitor/"
+                                title="Seismic Alert Monitor live map"
+                                width="100%" height="550"
+                                loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="project-section">
+                    <h2>System Architecture &amp; Engineering Breakdown</h2>
+
+                    <h3>Intake &rarr; Parse &rarr; Evaluate &rarr; Act Pipeline</h3>
+                    <p>
+                        Each stage is its own decoupled module with a single responsibility: <strong>UsgsApiClient</strong> fetches raw GeoJSON,
+                        <strong>EventParser</strong> maps it into immutable domain objects, <strong>RuleEngine</strong> evaluates every event against the active rules, and
+                        <strong>AlertDispatcher</strong> renders the results to the console, CSV, and the JSON feed behind the map.
+                    </p>
+
+                    <h3>OOAD &amp; the Strategy Pattern</h3>
+                    <p>
+                        <strong>MagnitudeRule</strong>, <strong>ProximityRule</strong> (Haversine great-circle distance), and <strong>TsunamiRule</strong> are each
+                        encapsulated behind a shared <strong>AlertRule</strong> interface. New rules can be added without modifying the core engine.
+                    </p>
+
+                    <h3>Verification &amp; CI/CD</h3>
+                    <p>
+                        The system is backed by <strong>41 JUnit 5 unit tests</strong> mapped to a formal Requirements Traceability Matrix (RTM). A GitHub Actions workflow
+                        runs <code>mvn test</code> and then refreshes the live JSON feed every 30 minutes.
+                    </p>
+                </div>
+
+                <div class="project-section">
+                    <h2>Tech Stack</h2>
+                    <ul class="tech-badges">
+                        <li>Java 17</li>
+                        <li>Maven</li>
+                        <li>Jackson</li>
+                        <li>JUnit 5</li>
+                        <li>GitHub Actions (CI/CD)</li>
+                        <li>Leaflet.js</li>
+                        <li>USGS GeoJSON API</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        <footer class="site-footer">
+            <p>&copy; Designed & Coded by Max Orywal, 2025.</p>
+        </footer>
+        </div>
+        <script src="../script.js"></script>
+    </body>
+</html>

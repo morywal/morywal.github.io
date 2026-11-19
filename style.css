@@ -1161,6 +1161,105 @@ nav > p > a:hover::after {
     display: block;
 }
 
+/* ─── PROJECT ACTIONS, MAP EMBED, TECH BADGES ─── */
+.project-subtitle {
+    margin: 0.5rem 0 0;
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+}
+
+.project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+}
+
+.btn-secondary {
+    display: inline-block;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background-color: transparent;
+    border: 1.5px solid var(--border-active);
+    border-radius: var(--radius);
+    padding: 0.7rem 1.75rem;
+    text-decoration: none;
+    transition:
+        transform 140ms var(--ease-out),
+        background-color 140ms var(--ease-out),
+        border-color 140ms var(--ease-out);
+}
+
+.btn-secondary:hover {
+    color: var(--accent);
+    background-color: var(--accent-dim);
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.btn-secondary:active {
+    transform: translateY(2px);
+}
+
+.map-embed {
+    width: 100%;
+    margin: 1rem 0;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+    transition: box-shadow 280ms;
+}
+
+.map-embed:hover {
+    box-shadow: var(--shadow-card), var(--shadow-glow);
+}
+
+.map-embed iframe {
+    display: block;
+    width: 100%;
+    height: 550px;
+    border: none;
+}
+
+.project-body h3 {
+    color: var(--text-primary);
+    margin: 1.25rem 0 0.25rem;
+}
+
+.project-body code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9em;
+    color: var(--accent);
+    background-color: var(--accent-dim);
+    padding: 0.1em 0.4em;
+    border-radius: 4px;
+}
+
+.project-body ul.tech-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    margin: 1rem 0 0;
+    padding: 0;
+}
+
+.tech-badges li {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+    color: var(--accent);
+    background-color: var(--accent-dim);
+    border: 1px solid var(--border-active);
+    border-radius: 999px;
+    padding: 0.35rem 0.9rem;
+}
+
 /* ─── FOOTER ─── */
 .site-footer {
     margin-top: var(--spacing);

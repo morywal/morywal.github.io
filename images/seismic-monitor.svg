@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Seismic Alert Monitor map preview">
+  <rect width="640" height="360" fill="#0f1623"/>
+  <g stroke="#22d3ee" stroke-opacity="0.08" stroke-width="1">
+    <path d="M0 60H640M0 120H640M0 180H640M0 240H640M0 300H640"/>
+    <path d="M80 0V360M160 0V360M240 0V360M320 0V360M400 0V360M480 0V360M560 0V360"/>
+  </g>
+  <path d="M120 40 C170 70 190 120 215 160 C240 200 270 230 300 265 C320 290 350 310 380 330"
+        fill="none" stroke="#7a92aa" stroke-opacity="0.45" stroke-width="2" stroke-dasharray="6 6"/>
+  <path d="M40 300 L95 300 L115 300 L130 250 L145 330 L160 210 L178 340 L195 270 L210 300 L600 300"
+        fill="none" stroke="#22d3ee" stroke-width="3" stroke-linejoin="round" stroke-opacity="0.85"/>
+  <circle cx="245" cy="185" r="34" fill="#fbbf24" fill-opacity="0.18" stroke="#fbbf24" stroke-width="2"/>
+  <circle cx="245" cy="185" r="8" fill="#fbbf24"/>
+  <circle cx="330" cy="150" r="22" fill="#22d3ee" fill-opacity="0.18" stroke="#22d3ee" stroke-width="2"/>
+  <circle cx="330" cy="150" r="6" fill="#22d3ee"/>
+  <circle cx="410" cy="205" r="16" fill="#22d3ee" fill-opacity="0.18" stroke="#22d3ee" stroke-width="2"/>
+  <circle cx="410" cy="205" r="5" fill="#22d3ee"/>
+  <circle cx="200" cy="105" r="48" fill="#f87171" fill-opacity="0.16" stroke="#f87171" stroke-width="2"/>
+  <circle cx="200" cy="105" r="10" fill="#f87171"/>
+  <circle cx="300" cy="230" r="120" fill="none" stroke="#22d3ee" stroke-opacity="0.3" stroke-width="1.5" stroke-dasharray="4 6"/>
+  <text x="600" y="48" text-anchor="end" font-family="monospace" font-size="20" fill="#dde6f0">SEISMIC ALERT MONITOR</text>
+  <text x="600" y="74" text-anchor="end" font-family="monospace" font-size="14" fill="#7a92aa">Java 17 · CI/CD · Leaflet.js</text>
+</svg>
