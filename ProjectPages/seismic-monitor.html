@@ -83,7 +83,17 @@
 
                 <div class="project-section">
                     <h2>System Architecture &amp; Engineering Breakdown</h2>
-
+                        <figure style="margin: 2rem 0; text-align: center;">
+                        <img 
+                            src="../images/seismic-architecture.svg"
+                            alt="Seismic Alert & Proximity Monitor System Architecture Diagram" 
+                            style="width: 100%; max-width: 1000px; height: auto; background: #ffffff; padding: 16px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);" 
+                            loading="lazy"
+                        />
+                        <figcaption style="margin-top: 10px; font-size: 0.9rem; opacity: 0.8;">
+                            System Architecture: Intake &rarr; Parse &rarr; Evaluate (Strategy Pattern) &rarr; Act Pipeline
+                        </figcaption>
+                        </figure>
                     <h3>Intake &rarr; Parse &rarr; Evaluate &rarr; Act Pipeline</h3>
                     <p>
                         Each stage is its own decoupled module with a single responsibility: <strong>UsgsApiClient</strong> fetches raw GeoJSON,
