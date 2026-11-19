@@ -1260,6 +1260,34 @@ nav > p > a:hover::after {
     padding: 0.35rem 0.9rem;
 }
 
+/* Featured card: spans the full row, image beside text on wide screens */
+.card.card--featured {
+    flex: 1 1 100%;
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    grid-template-areas:
+        "img title"
+        "img desc"
+        "img link";
+    grid-template-rows: auto 1fr auto;
+    column-gap: var(--spacing);
+    align-items: start;
+    border-color: var(--border-active);
+}
+
+.card.card--featured > img   { grid-area: img; margin-bottom: 0; }
+.card.card--featured > h3    { grid-area: title; }
+.card.card--featured > p     { grid-area: desc; }
+.card.card--featured > a     { grid-area: link; margin-left: 0; }
+
+@media (max-width: 768px) {
+    .card.card--featured {
+        display: block;
+    }
+    .card.card--featured > img { margin-bottom: 0.875rem; }
+    .card.card--featured > a   { margin-left: auto; }
+}
+
 /* ─── FOOTER ─── */
 .site-footer {
     margin-top: var(--spacing);
@@ -1297,6 +1325,7 @@ nav > p > a:hover::after {
 .cards .card:nth-child(2) { animation: fadeSlideUp 0.5s 0.17s var(--ease-out) both; }
 .cards .card:nth-child(3) { animation: fadeSlideUp 0.5s 0.26s var(--ease-out) both; }
 .cards .card:nth-child(4) { animation: fadeSlideUp 0.5s 0.35s var(--ease-out) both; }
+.cards .card:nth-child(5) { animation: fadeSlideUp 0.5s 0.44s var(--ease-out) both; }
 
 @keyframes fadeSlideUp {
     from { opacity: 0; transform: translateY(20px); }
